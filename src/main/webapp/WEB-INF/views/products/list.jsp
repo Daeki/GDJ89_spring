@@ -77,10 +77,11 @@
 		  </ul>
 		</nav>
 		
-		
-		<div>
-		<a href="./add" class="btn btn-outline-success">상품 등록</a>
-		</div>
+		<c:if test="${user.userName eq 'id'}">
+			<div>
+			<a href="./add" class="btn btn-outline-success">상품 등록</a>
+			</div>
+		</c:if>
 	</div>
 </div>
 

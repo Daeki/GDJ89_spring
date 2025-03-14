@@ -45,9 +45,20 @@
 				</c:forEach>
 			</tbody>
 		</table>
-		<div>
-		<a href="./add" class="btn btn-outline-success">글작성</a>
-		</div>
+		
+		<c:if test="${kind eq 'notice' and not empty user and user.userName eq 'id'}">
+			<div>
+			<a href="./add" class="btn btn-outline-success">글작성</a>
+			</div>
+		</c:if>
+		
+		<c:if test="${kind ne 'notice' and not empty user}">
+			<div>
+			<a href="./add" class="btn btn-outline-success">글작성</a>
+			</div>
+		</c:if>
+		
+		
 	</div>
 </div>
 

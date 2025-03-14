@@ -30,7 +30,7 @@ public class NoticeController {
 	
 	@ModelAttribute("kind")
 	public String getKind() {
-		return this.kind;
+		return "notice";
 	}
 	
 	@RequestMapping(value="list", method = RequestMethod.GET)
@@ -67,6 +67,7 @@ public class NoticeController {
 	}
 	@RequestMapping(value="add", method = RequestMethod.GET)
 	public String add()throws Exception{
+
 		return "board/boardForm";
 	}
 	

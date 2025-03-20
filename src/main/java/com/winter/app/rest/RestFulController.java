@@ -47,16 +47,16 @@ public class RestFulController {
 		//ResponseEntity<JsonDTO> res = restTemplate.getForEntity("https://jsonplaceholder.typicode.com/posts/1", JsonDTO.class, req);
 		
 		JsonDTO res= restTemplate.getForObject("https://jsonplaceholder.typicode.com/posts/1", JsonDTO.class, req);
-		
+		System.out.println(res);
 		//2)Post
-		restTemplate.postForEntity("url", req, JsonDTO.class);
+		//restTemplate.postForEntity("url", req, JsonDTO.class);
 		
 		//3) GET/POST
-		ResponseEntity<JsonDTO> response = restTemplate.exchange("url", HttpMethod.POST, req, JsonDTO.class);
+		//ResponseEntity<JsonDTO> response = restTemplate.exchange("url", HttpMethod.POST, req, JsonDTO.class);
 		
 		
 		//5. 요청의 결과를 DTO에 담는데 DTO가 여러개 나올경우
-		List<JsonDTO> r= restTemplate.getForObject("url", List.class, req);
+		//List<JsonDTO> r= restTemplate.getForObject("url", List.class, req);
 		
 		
 		
